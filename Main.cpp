@@ -1,6 +1,6 @@
-#include "child/Circle.h"
-#include "child/Square.h"
-#include "child/Rectangle.h"
+#include "../App1_university/child/Circle.h"
+#include "../App1_university/child/Rectangle.h"
+#include "../App1_university/child/Square.h"
 
 int main()
 {
