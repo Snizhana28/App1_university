@@ -6,9 +6,9 @@ int main()
 
     while (true) {
         cout << "Select an option:\n";
-        cout << "1. Add a book";
-        cout << "2. Delete a book";
-        cout << "3. Search for a book by author";
+        cout << "1. Add a book\n";
+        cout << "2. Delete a book\n";
+        cout << "3. Search for a book by author\n";
         cout << "4. Sort books by year of publication\n";
         cout << "5. Show all books in the library\n";
         cout << "6. Exit\n";

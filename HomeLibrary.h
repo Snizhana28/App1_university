@@ -13,7 +13,7 @@ public:
 
     void removeBook(const string& title) {
         auto it = find_if(library.begin(), library.end(), [&](const Book& b) {
-            return b.title == title;
+            return b.getTitle() == title;
         });
 
         if (it != library.end()) {
@@ -28,8 +28,8 @@ public:
     void searchByAuthor(const string& author) {
         cout << "Books by the author " << author << ":\n";
         for (const Book& book : library) {
-            if (book.author == author) {
-                cout << "Title: " << book.title << ", Year of publication: " << book.year << "\n";
+            if (book.getAuthor() == author) {
+                cout << "Title: " << book.getTitle() << ", Year of publication: " << book.getYear() << "\n";
             }
         }
     }
@@ -37,7 +37,7 @@ public:
     void sortByYear() {
         sort(library.begin(), library.end(), [](const Book& a, const Book& b) 
         {
-            return a.year < b.year;
+            return a.getYear() < b.getYear();
         });
 
         cout << "The library is sorted by year of publication.\n";
@@ -46,7 +46,7 @@ public:
     void displayLibrary() {
         cout << "Library:\n";
         for (const Book& book : library) {
-            cout << "Title: " << book.title << ", Author: " << book.author << ", Year of publication: " << book.year << "\n";
+            cout << "Title: " << book.getTitle() << ", Author: " << book.getAuthor() << ", Year of publication: " << book.getYear() << "\n";
         }
     }
 };
